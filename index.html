@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>website</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="bgimg">
+		<div class="menu">
+			<div class="leftmenu">
+            <h4>WEBSITE</h4>
+			</div>
+			<div class="rightmenu">
+				<ul>
+				<li id="first">Home</li>
+				<li>services</li>
+				<li>contact us</li>
+				<li>About us</li>
+				<ul>
+			</div>
+
+        </div>
+
+        <div class="text">
+        	<h4>DESIGN . DEVELOP .BRAND</h4>
+        	<h1>CREATIVE & EXPERIENCED</h3>
+             <h3>WE ARE ONE OF THE WORLD'S TOP CREATIVE DESIGN AGENCIES</h1>
+             <button id="buttonone">Welcome</button>
+             <button id="buttontwo">Log in</button>
+
+         </div>
+
+	</div>
+
+	<br><br>
+
+
+
+
+<div class="container"><br>
+<h1 class="text-success text-center font-weight-bold">Please Sign in</h1><br>
+<div class="col-lg-8 m-auto d-block">   
+<form action="#" onsubmit="return validation()" class="bg-light">
+
+<div class="form-group">
+<label>Username:</label>
+<input type="text" name="user" class="form-control" id="user" autocomplete="off">
+<span id="username" class="text-danger font-weight-bold"></span>
+</div>
+
+<div class="form-group">
+<label>Password:</label>
+<input type="password" name="pass" class="form-control" id="pass" autocomplete="off">
+<span id="password" class="text-danger font-weight-bold"></span>
+</div>
+
+<div class="form-group">
+<label>Confirm Password:</label>
+<input type="password" name="conpass" class="form-control" id="conpass" autocomplete="off">
+<span id="conpassword" class="text-danger font-weight-bold"></span>
+
+</div>
+
+<input type="submit" name="submit" value="submit" class="btn btn-success">
+</form>
+</div>
+</div>
+
+
+
+
+
+<script>
+
+function validation()
+{
+	var user=document.getElementById('user').value;
+	var pass=document.getElementById('pass').value;
+	var conpass=document.getElementById('conpass').value;
+	if(user=="")
+	{
+		document.getElementById('username').innerHTML="**Please fill username";
+		return false;
+	}
+	if((user.length<=2) || (user.length>20))
+	{
+       
+        document.getElementById('username').innerHTML="**character must be between 2and 20";
+		return false;
+	}
+	if(!isNaN(user))
+	{
+        document.getElementById('username').innerHTML="**Please fill character";
+		return false;
+	}
+	if(pass="")
+	{
+
+		document.getElementById('password').innerHTML="**Please fill Password";
+		return false;
+	}
+	if((pass.length<=5)||(pass.length>20))
+	{
+		document.getElementById('password').innerHTML="**Password must be between 2 and 20";
+		return false;
+	}
+
+	if(conpass=="")
+	{
+      
+		document.getElementById('conpassword').innerHTML="**Please confirm password";
+		return false;
+
+	}
+	if(pass!=conpass)
+	{
+		document.getElementById('conpassword').innerHTML="**Password mismatch";
+		return false;
+	}
+
+}
+</script>
+
+
+<br><br>
+<hr>
+
+
+
+
+
+
+</body>
+</html>
